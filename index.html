@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARZAADS | Ads & Design Cafe</title>
+    <meta name="description" content="We help businesses grow using ads, creative design, and smart digital strategies.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Canvas for Background Animation -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <!-- Replace 'logo.png' with the actual uploaded logo file path when available -->
+            <img src="logo.png" alt="MARZAADS Logo" class="brand-logo" onerror="this.style.display='none'; document.getElementById('fallback-logo').style.display='block';">
+            <h1 id="fallback-logo" style="display: none;">MARZA<span class="highlight">ADS</span></h1>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main class="content-wrapper">
+        <!-- Hero Section -->
+        <section id="hero" class="section hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to <span class="highlight">Marzaads</span></h1>
+                <p class="hero-subtitle">Ads & Design Cafe</p>
+                <div class="scroll-indicator">
+                    <span>Scroll to explore</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section services-section">
+            <div class="container">
+                <h2 class="section-title">Our <span class="highlight">Services</span></h2>
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card glass-panel">
+                        <div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div>
+                        <h3>Paid Advertising</h3>
+                        <ul>
+                            <li><i class="fa-brands fa-meta"></i> Meta Ads (Facebook & Instagram)</li>
+                            <li><i class="fa-brands fa-google"></i> Google Ads (Search, Display, YouTube)</li>
+                        </ul>
+                        <div class="service-actions">
+                            <a href="#" class="service-btn"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                            <a href="https://wa.me/918137080397" target="_blank" class="service-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                        </div>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="service-card glass-panel">
+                        <div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                        <h3>Design & Creative</h3>
+                        <ul>
+                            <li><i class="fa-solid fa-laptop-code"></i> Website Design</li>
+                            <li><i class="fa-solid fa-compass-drafting"></i> Logo Design</li>
+                            <li><i class="fa-regular fa-image"></i> Poster / Ad Creatives</li>
+                            <li><i class="fa-solid fa-video"></i> Video Editing</li>
+                        </ul>
+                        <div class="service-actions">
+                            <a href="#" class="service-btn"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                            <a href="https://wa.me/918137080397" target="_blank" class="service-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                        </div>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="service-card glass-panel">
+                        <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+                        <h3>Web & Local Presence</h3>
+                        <ul>
+                            <li><i class="fa-brands fa-wordpress"></i> WordPress Website Setup</li>
+                            <li><i class="fa-solid fa-store"></i> Google Business Profile</li>
+                        </ul>
+                        <div class="service-actions">
+                            <a href="#" class="service-btn"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                            <a href="https://wa.me/918137080397" target="_blank" class="service-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                        </div>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="service-card glass-panel">
+                        <div class="service-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                        <h3>Social Media Growth</h3>
+                        <ul>
+                            <li><i class="fa-brands fa-instagram"></i> Instagram Growth</li>
+                            <li><i class="fa-brands fa-youtube"></i> YouTube Growth</li>
+                            <li><i class="fa-solid fa-users"></i> Engagement (Likes, Comments)</li>
+                            <li><i class="fa-solid fa-chart-line"></i> Organic & Promotional Methods</li>
+                        </ul>
+                        <div class="service-actions">
+                            <a href="#" class="service-btn"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                            <a href="https://wa.me/918137080397" target="_blank" class="service-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container glass-panel about-panel">
+                <h2 class="section-title">About <span class="highlight">Us</span></h2>
+                <p class="about-text">
+                    We help businesses grow using <span class="highlight-text">ads</span>, <span class="highlight-text">creative design</span>, and <span class="highlight-text">smart digital strategies</span>. At Marzaads, we combine artistic vision with data-driven performance to elevate your brand in the digital space.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title">Start Your <span class="highlight">Growth</span> Today</h2>
+                <div class="contact-grid">
+                    <div class="contact-info glass-panel">
+                        <div class="contact-item">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>+91 8137080397</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>marzaads77@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>Kakkanad, Kochi - Bhrammapuram,<br>Infopark Phase 2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-actions">
+                        <a href="https://wa.me/918137080397" target="_blank" class="btn btn-primary glow-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                        <a href="tel:+918137080397" class="btn btn-secondary">
+                            <i class="fa-solid fa-phone"></i> Call Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="footer">
+            <p>&copy; 2026 Marzaads. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
