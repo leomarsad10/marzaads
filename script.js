@@ -148,20 +148,18 @@ document.addEventListener('DOMContentLoaded', () => {
             let intensity = this.depth / this.maxDepth;
             
             if (this.isRoot) {
-                // Mystic glowing roots (greenish/teal)
-                ctx.strokeStyle = `rgba(20, ${150 - intensity * 50}, ${100 + intensity * 150}, 0.8)`;
+                // Dark red/black roots
+                ctx.strokeStyle = `rgba(${50 + intensity * 50}, 0, 0, 0.8)`;
             } else {
-                // Vibrant multi-colored digital tree
-                let r = 50 + intensity * 205;
-                let g = 50 + intensity * 100;
-                let b = 100 + intensity * 155;
-                ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, 0.85)`;
+                // Vibrant red tree branches fading from black
+                let r = 80 + intensity * 175;
+                ctx.strokeStyle = `rgba(${r}, 0, 0, 0.85)`;
             }
             
             // Glow effect
             if (this.depth > this.maxDepth - 3 || this.isRoot) {
                 ctx.shadowBlur = 15;
-                ctx.shadowColor = `hsl(${this.hue}, 100%, 65%)`;
+                ctx.shadowColor = `rgba(255, 0, 60, 0.8)`;
             } else {
                 ctx.shadowBlur = 0;
             }
@@ -190,38 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     initTree();
 
-    // 4. Particles (Mystic glowing spores)
-    let particles = [];
-    for(let i=0; i<150; i++) {
-        particles.push({
-            x: Math.random() * width,
-            y: Math.random() * height,
-            size: Math.random() * 3 + 1,
-            speedY: -Math.random() * 1.5 - 0.5,
-            speedX: Math.random() * 1 - 0.5,
-            hue: Math.random() * 360,
-            opacity: Math.random() * 0.6 + 0.2
-        });
-    }
-
-    function drawParticles() {
-        for(let p of particles) {
-            ctx.shadowBlur = 10;
-            ctx.shadowColor = `hsl(${p.hue}, 100%, 50%)`;
-            ctx.fillStyle = `hsla(${p.hue}, 100%, 70%, ${p.opacity})`;
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-            ctx.fill();
-            
-            p.y += p.speedY;
-            p.x += p.speedX;
-            if (p.y < -10) {
-                p.y = height + 10;
-                p.x = Math.random() * width;
-            }
-        }
-        ctx.shadowBlur = 0;
-    }
+    // Particles removed per user request
 
     // 5. Digital Platform Icons
     const iconClasses = [
@@ -238,8 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const iconDiv = document.createElement('div');
         
         let isText = Math.random() > 0.85;
-        let iconHue = Math.floor(Math.random() * 360);
-        let color = `hsl(${iconHue}, 100%, 65%)`;
+        let color = `#ff003c`; // red themed icon
         
         if (isText) {
             iconDiv.className = `platform-icon text-logo`;
@@ -386,7 +352,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         ctx.restore();
 
-        drawParticles();
         updateIcons();
 
         requestAnimationFrame(animate);
